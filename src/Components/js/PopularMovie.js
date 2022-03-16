@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import { getData } from './GetData'
 import ShowMovieInPage from './ShowMovieInPage'
+import '../css/Movies.css';
 
 
 
@@ -36,7 +37,9 @@ export default function PopularMovie() {
 
   return (
    <main>
-      {movies.map(item => <ShowMovieInPage data={item}/>)}
+      {!movies ? 
+      <p className='error'>Wait Data...</p> : 
+      movies.map(item => <ShowMovieInPage data={item}/>)}
    </main>
   )
 }
