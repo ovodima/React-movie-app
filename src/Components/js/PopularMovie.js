@@ -1,12 +1,13 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState,  useEffect} from 'react'
 import { getData } from './GetData'
 import ShowMovieInPage from './ShowMovieInPage'
-import '../css/Movies.css';
+
+
 
 
 
 export default function PopularMovie() {
-    const [loaded, setLoaded] = useState(false)
+    //  const search = useContext(SearchValue)
     const [movies, setMovies] = useState([])
 
     useEffect(() => {
@@ -16,30 +17,23 @@ export default function PopularMovie() {
           try {
             const response = await getData(url);
             const json = await response.json();
-            setLoaded(!loaded)
-            setMovies(oldMovies =>  oldMovies.concat(json.results))
+            
+            setMovies(movies =>  movies.concat(json.results))
           } catch (error) {
             console.log("error", error);
           }
         };
     
         fetchData();
-
-        return () => {
-          if(!movies) {
-            console.log('wait...')
-          } else {
-            console.log('movies', movies)
-          }
-        }
-        
     }, []);
 
   return (
+    
    <main>
       {!movies ? 
       <p className='error'>Wait Data...</p> : 
-      movies.map(item => <ShowMovieInPage data={item}/>)}
+      movies.map(item => <ShowMovieInPage data={item} key={item.id}/>)}
    </main>
+ 
   )
 }

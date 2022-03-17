@@ -1,4 +1,5 @@
 import React from 'react'
+import '../css/Movies.css';
 
 const voteRate = (vote) => {
     if (vote >= 8) {
@@ -13,6 +14,7 @@ const voteRate = (vote) => {
 export default function ShowMovieInPage(props) {
 
     let imgPath = "https://image.tmdb.org/t/p/w1280"
+    
     const { data } = props
     const {
         poster_path,
@@ -27,7 +29,7 @@ export default function ShowMovieInPage(props) {
 
   return (
     <div key={id} className = "movie">
-            <img src={imgPath  + poster_path} alt="photo"/>
+            <img src={imgPath + poster_path} alt="photo"/>
                   
             <div className="movie-info">
             <h3>{original_title}</h3>
