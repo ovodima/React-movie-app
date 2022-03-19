@@ -10,10 +10,10 @@ import SearchMovies from './Components/js/SearchMovies';
 
 function App() {
  
-const [value, setValue] = useState(null)
+const [value, setValue] = useState()
 
 const handleValue = (e) => {
-  e.preventDefault()
+  // e.stopPropagation()
   setValue(e.target.value)
 }
   return (
@@ -22,8 +22,6 @@ const handleValue = (e) => {
       {value 
       ? <SearchMovies searchReq={value}/> 
       : <PopularMovie/>}
-      
-      
     </>
   );
 }

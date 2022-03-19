@@ -25,8 +25,7 @@ export default function Header(props) {
             className="search" 
             placeholder="Search" 
             value={value}
-            onChange={change}
-            onSubmit={change}
+            onInputCapture={change}
             />
         </form>
     </header>

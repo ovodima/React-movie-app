@@ -7,7 +7,6 @@ import ShowMovieInPage from './ShowMovieInPage'
 
 
 export default function PopularMovie() {
-    //  const search = useContext(SearchValue)
     const [movies, setMovies] = useState([])
 
     useEffect(() => {

@@ -22,14 +22,19 @@ export default function SearchMovies(props) {
       };
   
       fetchData();
-      
+
   }, [searchReq]);
   
+  console.log('result', result)
+const filterMovie = result.filter(movie => {
+  return movie.title.toLowerCase().includes(searchReq.toLowerCase())
+})
+
   return (
     <main>
      {!result ? 
       <p className='error'>Wait Data...</p> : 
-      result.map(item => <ShowMovieInPage data={item} key={item.id}/>)}
+      filterMovie.map(item => <ShowMovieInPage data={item} key={item.id}/>)}
       </main>
   )
 }
