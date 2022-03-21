@@ -13,7 +13,6 @@ function App() {
 const [value, setValue] = useState()
 
 const handleValue = (e) => {
-  // e.stopPropagation()
   setValue(e.target.value)
 }
   return (

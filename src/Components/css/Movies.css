@@ -1,7 +1,7 @@
 main {
     display: flex;
     flex-wrap: wrap;
-
+    
 }
 
 .movie {
@@ -71,4 +71,14 @@ main {
 
 .movie:hover .overview {
     transform: translateY(0);
+}
+
+@media  only screen 
+and (min-device-width:390px)
+and (max-device-width:884px) {
+    main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
