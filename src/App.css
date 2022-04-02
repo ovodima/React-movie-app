@@ -3,6 +3,9 @@
 :root {
     --primary-color: #0b132b;
     --secondary-color: #37839c;
+    --first-color:#fcd86b;
+    --hover-color:#a763f6;
+    --bg-color:#ffffff;
 }
 
 * {
@@ -11,7 +14,7 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: var(--primary-color);
+    background-color: var(--bg-color);
     margin: 0;
     width: 100%;
 }

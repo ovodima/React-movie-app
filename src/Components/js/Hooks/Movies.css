@@ -3,6 +3,11 @@ main {
     flex-wrap: wrap;
     
 }
+.home-movie{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
 
 .movie {
     width: 300px;

@@ -18,6 +18,7 @@ header {
 
 .search::placeholder {
     color: #6fffe9;
+    
 }
 
 .search:focus {

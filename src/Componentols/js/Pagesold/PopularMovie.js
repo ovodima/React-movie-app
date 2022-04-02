@@ -1,6 +1,7 @@
 import React, {useState,  useEffect} from 'react'
-import { getData } from './GetData'
-import ShowMovieInPage from './ShowMovieInPage'
+import ShowMovieInPage from '../ShowMovieInPage';
+import { getData } from '../GetData'
+
 
 
 
@@ -25,6 +26,8 @@ export default function PopularMovie() {
     
         fetchData();
     }, []);
+
+
 
   return (
     

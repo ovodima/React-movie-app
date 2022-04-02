@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import { getData } from './GetData'
 import ShowMovieInPage from './ShowMovieInPage'
 
+
 export default function SearchMovies(props) {
     const [result, setResult] = useState([])
     const {searchReq} = props
@@ -25,7 +26,7 @@ export default function SearchMovies(props) {
 
   }, [searchReq]);
   
-  console.log('result', result)
+
 const filterMovie = result.filter(movie => {
   return movie.title.toLowerCase().includes(searchReq.toLowerCase())
 })
@@ -35,6 +36,6 @@ const filterMovie = result.filter(movie => {
      {!result ? 
       <p className='error'>Wait Data...</p> : 
       filterMovie.map(item => <ShowMovieInPage data={item} key={item.id}/>)}
-      </main>
+    </main>
   )
 }

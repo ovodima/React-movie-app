@@ -1,5 +1,5 @@
 import React from 'react'
-import '../css/Movies.css';
+import './Movies.css';
 
 const voteRate = (vote) => {
     if (vote >= 8) {
