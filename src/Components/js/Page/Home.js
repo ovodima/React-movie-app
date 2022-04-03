@@ -9,7 +9,8 @@ import SearchMovies from '../Hooks/SearchMovies';
 
 export default function Home() {
 
- const searchValue = useContext(InputContext)
+const req = useContext(InputContext)
+
 
 const [movies, setMovies] = useState([])
 
@@ -30,11 +31,13 @@ const [movies, setMovies] = useState([])
 
   return (
     <div className='home-movie'>
-      {
-        searchValue ? 
-          movies.map(item => <ShowMovieInPage data={item} key={item.id}/>)
-          : <SearchMovies searchReq={searchValue}/>
+      
+      { !req.value
+        ? movies.map(item => <ShowMovieInPage key={item.id} data={item}/>)
+        : <SearchMovies valueInput={req.value}/>
       }
+
+      
     </div>
   )
 }

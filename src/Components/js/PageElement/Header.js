@@ -17,7 +17,7 @@ import SearchInput from './SearchInput';
 
 export default function Header() {
 
-  const [value, setValue] = useState()
+  const [value, setValue] = useState('')
 
   const handleValue = (e) => {
     setValue(e.target.value)
@@ -44,11 +44,9 @@ export default function Header() {
               </nav>
           </header>
       
-
-
             <InputContext.Provider value={providerValue}>
               <Routes>
-                <Route path="/" element={<Home />}/>
+                <Route path="/" element={<Home />} />
                 <Route path="/popular" element={<Popular />}/>
                 <Route path="/watching" element={<Watching />}/>
                 <Route path="/account" element={<Account />}/>

@@ -28,8 +28,8 @@ export default function ShowMovieInPage(props) {
       
 
   return (
-    <div key={id} className = "movie">
-            <img src={imgPath + poster_path} alt="photo"/>
+    <div kye={id} className = "movie">
+            <img src={imgPath + poster_path} alt={imgPath + poster_path}/>
                   
             <div className="movie-info">
             <h3>{original_title}</h3>
