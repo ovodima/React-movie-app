@@ -2,6 +2,6 @@ import React from 'react'
 
 export default function Watching() {
   return (
-    <div>Watching</div>
+    <div>Watching now develop</div>
   )
 }

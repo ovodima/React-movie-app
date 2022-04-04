@@ -32,7 +32,8 @@ const [movies, setMovies] = useState([])
   return (
     <div className='home-movie'>
       
-      { !req.value
+      { 
+        !req.value
         ? movies.map(item => <ShowMovieInPage key={item.id} data={item}/>)
         : <SearchMovies valueInput={req.value}/>
       }
@@ -41,4 +42,3 @@ const [movies, setMovies] = useState([])
     </div>
   )
 }
-

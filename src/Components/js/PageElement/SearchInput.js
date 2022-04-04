@@ -14,7 +14,7 @@ export default function SearchInput(props) {
                   className="search" 
                   placeholder="Search" 
                   value={value}
-                  onInput={change}
+                  onChange={change}
                   />
               </form>
         
