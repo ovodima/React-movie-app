@@ -1,23 +1,20 @@
-import React from 'react'
-import './Input.css'
-
+import React from "react";
+import "./Input.css";
 
 export default function SearchInput(props) {
-  const {value, change} = props
+  const { value, change } = props;
   return (
     <>
-      
-              <form action="#" id="form">
-                  <input 
-                  type="text" 
-                  id="search" 
-                  className="search" 
-                  placeholder="Search" 
-                  value={value}
-                  onChange={change}
-                  />
-              </form>
-        
+      <form action="#" id="form">
+        <input
+          type="text"
+          id="search"
+          className="search"
+          placeholder="Search"
+          value={value}
+          onChange={change}
+        />
+      </form>
     </>
-  )
+  );
 }

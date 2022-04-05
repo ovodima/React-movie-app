@@ -1,7 +1,5 @@
-import React from 'react'
+import React from "react";
 
 export default function Watching() {
-  return (
-    <div>Watching now develop</div>
-  )
+  return <div>Watching now develop</div>;
 }
