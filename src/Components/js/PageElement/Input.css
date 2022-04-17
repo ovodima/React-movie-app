@@ -30,7 +30,6 @@ form {
 
 .search::placeholder {
     color: var(--first-color);
-    
 }
 
 .search:focus {
@@ -47,6 +46,10 @@ form {
     }
 
     .search {
-        width: 80%;
+        width: 70%;
+    }
+
+    .search::placeholder {
+        margin: 0 auto;
     }
 }

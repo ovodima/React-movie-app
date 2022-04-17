@@ -36,15 +36,15 @@ export default function Header() {
             <FontAwesomeIcon
               icon="fa-solid fa-bars"
               onClick={handleBars}
-              className={bars ? "hide" : "show"}
+              className={!bars ? "hide" : "show"}
             />
             <FontAwesomeIcon
               icon="fa-solid fa-x"
               onClick={handleBars}
-              className={!bars ? "hide" : "show"}
+              className={bars ? "hide" : "show"}
             />
           </div>
-          <nav className={bars ? "show-navbar" : "navbar"}>
+          <nav className={!bars ? "show-navbar" : "navbar"}>
             <ul className="nav-items">
               <li className="nav-item">
                 <Link to="/" className="nav-link">
