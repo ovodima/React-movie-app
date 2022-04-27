@@ -104,3 +104,25 @@
   .container .info span .fa {
     color: #EF3B3A;
   }
+
+
+  @media screen and (max-width: 768px) {
+    .login-page {
+      width: 90%;
+      height: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+    }
+
+    .form {
+      width: 100%;
+
+    }
+
+    .form input {
+      width: 100%;
+      margin: 10px;
+    }
+  }
